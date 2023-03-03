@@ -8,6 +8,7 @@ type User = {
 }
 
 export function makeServer() {
+    console.log("Mirage server initializing...");
     const server = createServer({
         
         serializers: {
@@ -34,6 +35,7 @@ export function makeServer() {
         },
         routes() {
             this.namespace = 'api';
+            this.urlPrefix = 'https://dash-jordaniodev.vercel.app/';
             this.timing = 750;
             this.get('/users', function (schema, request) {
                 const { page = 1, perPage: per_page = 10 } = request.queryParams;

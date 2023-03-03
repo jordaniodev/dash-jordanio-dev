@@ -31,7 +31,7 @@ interface DataUserResponse {
   users: {
     created_at: string;
     name: string;
-    id: string;
+    id: number;
     email: string;
   }[],
   totalCount:number

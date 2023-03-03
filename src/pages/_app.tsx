@@ -2,8 +2,8 @@ import { ChakraProvider } from '@chakra-ui/react';
 import { AppProps } from "next/app";
 import { QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
+import { makeServer } from '../../server';
 import { SidebarDrawerProvider } from '../contexts/SideBarDrawerContext';
-import { makeServer } from '../services/mirage';
 import { clientProvider } from '../services/queryClient';
 import { theme } from '../styles/theme';
 

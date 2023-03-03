@@ -6,10 +6,8 @@ import { makeServer } from '../../server';
 import { SidebarDrawerProvider } from '../contexts/SideBarDrawerContext';
 import { clientProvider } from '../services/queryClient';
 import { theme } from '../styles/theme';
-console.log(process.env.NODE_ENV)
-if(process.env.NODE_ENV === 'development'){
-  makeServer()
-}
+
+makeServer()
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
